@@ -1,0 +1,1010 @@
+AxForm:
+  guid: aa18f4d5-c97a-4d3e-b908-4dce15011d15
+  name: CAPEX Request
+  db_name: PitchCapexRequest
+  parent: a83c3624-11ae-4ab5-a251-bfbc962d57bd
+  position: 0
+  tom_label: '{{axNum}}'
+  icon: chair
+AxFields:
+- guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  name: Default tab
+  db_name:
+  position: 0
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 0573fa06-2a26-4cbd-bd79-994b076a5f57
+  name: Request Number
+  db_name: axNum
+  position: 0
+  options_json: '{"comparator":"string"}'
+  private_options_json: '{"algorithm":"# first value of counter\nif not ax.counter:\n    ax.counter=1\n#
+    ax.value will be registration number\nax.value=f\"CP{ax.counter}\"\n# Increment
+    counter\nax.counter=str(int(ax.counter) + 1)","counterKey":"aa18f4d5-c97a-4d3e-b908-4dce15011d15"}'
+  field_type_tag: AxNum
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: becf1017-3575-4fa9-bc96-7b0435d9b4f4
+  name: Type of Real Estate
+  db_name: estateType
+  position: 0
+  options_json: '{"items":"[\n    { \"text\": \"Office Space\", \"value\": \"1\" },\n    {
+    \"text\": \"Warehouse\", \"value\": \"2\" },\n    { \"text\": \"Industrial Real
+    Estate\", \"value\": \"3\" },\n    { \"text\": \"Residential Property\", \"value\":
+    \"4\" },\n    { \"text\": \"Land\", \"value\": \"5\" }\n]"}'
+  private_options_json:
+  field_type_tag: AxChoise
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+- guid: 0bd1582f-47a4-423c-a26b-f166c9b1d9ac
+  name: Patent/License Details
+  db_name: patentDetails
+  position: 0
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 84c1e299-05cb-4761-9749-758ba4da7874
+- guid: 7f8ac266-bf21-460b-aa79-ef03ca1ad2e5
+  name: Details - Vehicle
+  db_name: vechicle
+  position: 0
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":400,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchCapexRequestVehicles","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: 49b707e0-8958-489a-b68e-9257194b86ed
+- guid: 2897825f-df03-4290-af1b-b231c123e56f
+  name: Details - Machinery
+  db_name: machinery
+  position: 0
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":400,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchCapexRequestMachinery","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: 73476621-e6c9-47b8-b2d1-0dfe77dfc631
+- guid: 6417d2f7-1c05-4f98-a2a2-98787febdeed
+  name: Office Furnitures
+  db_name: furnitures
+  position: 0
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":400,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchCapexRequestFurnitures","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: be6d878b-4492-4c59-9d52-c13ccfb63e38
+- guid: c907253c-ef33-4a1f-b14e-31ee3e49dd1f
+  name: Computer Hardware
+  db_name: hardware
+  position: 0
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":400,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchCapexRequestHardware","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: 8cd57c40-6985-4ffd-9d9a-45335e6ab6ab
+- guid: 2a934616-3cb1-4352-b177-7de5461acefd
+  name: Software
+  db_name: software
+  position: 0
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":400,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchCapexRequestSoftware","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: 96ba7862-57fb-4df5-ace6-dee809306632
+- guid: 73b8da00-ed36-4fa5-8eb7-a156d32709af
+  name: Quotes
+  db_name: quotes
+  position: 0
+  options_json: '{"isWholeRow":true,"height":400,"inline_height":400,"enableFormModal":true,"enableAddRelation":false,"addRelationLabel":"Add
+    existing","form":"PitchCapexRequestQuotes","grid":"Default","inline_grid":"Default"}'
+  private_options_json:
+  field_type_tag: Ax1tomTable
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: 260de877-425c-4f98-af38-4e6ee1bed37d
+- guid: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+  name: Details - Real Estate
+  db_name:
+  position: 1
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 68b9d529-1dd0-4cd0-a819-f90e170f9017
+  name: Real Estate's Proposed Location
+  db_name: estateLocation
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxText
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+- guid: a6b33f07-fbd8-4693-9b20-31df74bd0f99
+  name: 'Justification for Request '
+  db_name: panentJust
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxText
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: 84c1e299-05cb-4761-9749-758ba4da7874
+- guid: 0a97c67a-d561-4547-8966-a6c6a9389bc7
+  name: Current State
+  db_name: rowState
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxState
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 49b707e0-8958-489a-b68e-9257194b86ed
+  name: Details - Vehicle
+  db_name:
+  position: 2
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: eb3053eb-dc81-4a3c-aa5b-8741a189d705
+  name: Remarks
+  db_name: estateRemarks
+  position: 2
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxText
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+- guid: 0519b304-2124-4a06-b55e-f39f181864ce
+  name: CAPEX Type
+  db_name: type
+  position: 2
+  options_json: '{"items":"[\n    {\"text\": \"Real Estate\", \"value\": \"1\"},\n    {\"text\":
+    \"Vehicle\", \"value\": \"2\"},\n    {\"text\": \"Machinery\", \"value\": \"3\"},\n    {\"text\":
+    \"Office Furnitures and Fittings\", \"value\": \"4\"},\n    {\"text\": \"Computer
+    Hardware\", \"value\": \"5\"},\n    {\"text\": \"Software\", \"value\": \"6\"},\n    {\"text\":
+    \"Patent\/ License\", \"value\": \"7\"}\n]"}'
+  private_options_json:
+  field_type_tag: AxChoise
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: ad889a09-63ad-4b8a-ad78-ff06ac27fd8d
+  name: Request Date
+  db_name: date
+  position: 3
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxDate
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 73476621-e6c9-47b8-b2d1-0dfe77dfc631
+  name: Details - Machinery
+  db_name:
+  position: 3
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 5983325b-6ca0-4f7f-ad98-239f05bad257
+  name: Initiator
+  db_name: author
+  position: 4
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxAuthor
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: be6d878b-4492-4c59-9d52-c13ccfb63e38
+  name: Details - Office Furnitures and Fittings
+  db_name:
+  position: 4
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 1d13dbc2-5b40-41c1-856e-fbebab1d7fb2
+  name: Department
+  db_name: dep
+  position: 5
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 8cd57c40-6985-4ffd-9d9a-45335e6ab6ab
+  name: Details - Computer Hardware
+  db_name:
+  position: 5
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: fbacc610-b824-48e4-8efc-3f71a2199680
+  name: Finance Department Head
+  db_name: finHead
+  position: 6
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxSingleUser
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 96ba7862-57fb-4df5-ace6-dee809306632
+  name: Details - Software
+  db_name:
+  position: 6
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 6a740418-c9fe-4772-b2cc-443af2ecc3cf
+  name: Budget Allocated ?
+  db_name: allocated
+  position: 7
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxSwitch
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 84c1e299-05cb-4761-9749-758ba4da7874
+  name: Details - Patent and licence
+  db_name:
+  position: 7
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 7b36e576-3be2-4c84-b3c3-430936aa8ae6
+  name: Budget Account Head
+  db_name: budHead
+  position: 8
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxSingleUser
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 260de877-425c-4f98-af38-4e6ee1bed37d
+  name: TOP 3 Vendor Quotes
+  db_name:
+  position: 8
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: b2cb90fa-c889-4f33-8814-5a87b2a0cbf7
+  name: 'Allocated Budget '
+  db_name: allBudget
+  position: 9
+  options_json: '{"decimalCharacter":",","decimalPlaces":2,"digitGroupSeparator":"
+    ","wheelStep":1,"minimumValue":0,"currencySymbol":"$"}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: 6101c4f6-c27d-4780-abde-a9e01a8ed607
+  name: 'Utilised Budget '
+  db_name: utilBudget
+  position: 10
+  options_json: '{"decimalCharacter":",","decimalPlaces":2,"digitGroupSeparator":"
+    ","wheelStep":1,"minimumValue":0,"currencySymbol":"$"}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+- guid: a50d9f2e-3e41-4e67-9355-504e7761f178
+  name: Available Budget
+  db_name: avalBudget
+  position: 11
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: fc983935-537b-4ee1-8aa2-8c3431e314b4
+AxMetrics:
+- guid: 84d6259f-8f1b-476e-9213-16714fc30f8d
+  key: aa18f4d5-c97a-4d3e-b908-4dce15011d15
+  value: '2'
+AxGrids:
+- guid: 9e7fb1a0-2f10-47e6-a0d9-5cd9ddb5f471
+  name: All requests
+  db_name: All
+  position: 1
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0}'
+  is_default_view: true
+  columns:
+  - guid: 7c0f2020-8e52-48fe-ae20-8a0a08bf0c7a
+    position: 0
+    options_json:
+    field_guid: 0573fa06-2a26-4cbd-bd79-994b076a5f57
+    column_type: columns
+    aggregation_type:
+  - guid: 9a03dbb1-0e71-410f-8b14-7b5337d4fefc
+    position: 1
+    options_json:
+    field_guid: 0519b304-2124-4a06-b55e-f39f181864ce
+    column_type: columns
+    aggregation_type:
+  - guid: caab0ed6-34f7-4090-a65c-326d452ddfc1
+    position: 2
+    options_json:
+    field_guid: ad889a09-63ad-4b8a-ad78-ff06ac27fd8d
+    column_type: columns
+    aggregation_type:
+  - guid: 38765bca-4c26-435d-8e58-069aaa4ff98d
+    position: 3
+    options_json:
+    field_guid: 0a97c67a-d561-4547-8966-a6c6a9389bc7
+    column_type: columns
+    aggregation_type:
+- guid: 071fd508-dd5b-4f9e-b8aa-fb2a36aeab12
+  name: My requests
+  db_name: My
+  position: 2
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0}'
+  is_default_view: false
+  columns:
+  - guid: 79665d47-1427-4b07-b4ed-bfc46cff6ad4
+    position: 0
+    options_json:
+    field_guid: 0573fa06-2a26-4cbd-bd79-994b076a5f57
+    column_type: columns
+    aggregation_type:
+  - guid: d3104d7c-4aa3-40bb-b821-432ce7227c1f
+    position: 1
+    options_json:
+    field_guid: 0a97c67a-d561-4547-8966-a6c6a9389bc7
+    column_type: columns
+    aggregation_type:
+  - guid: 151c9713-f3f8-46cc-a0b9-7f9a70b43136
+    position: 2
+    options_json:
+    field_guid: ad889a09-63ad-4b8a-ad78-ff06ac27fd8d
+    column_type: columns
+    aggregation_type:
+  - guid: a3653d47-278d-45e0-855b-acddb4979dd9
+    position: 3
+    options_json:
+    field_guid: 0519b304-2124-4a06-b55e-f39f181864ce
+    column_type: columns
+    aggregation_type:
+- guid: 066e53c4-57a4-4bc5-bc39-d418ec21a04e
+  name: Finance Processing
+  db_name: Fin
+  position: 3
+  options_json: '{"enableQuickSearch":true,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":false,"rowHeight":45,"pinned":0,"widths":{"date":169,"type":138},"enableTitle":true}'
+  is_default_view: false
+  columns:
+  - guid: 9ab102e7-0375-4012-8526-e11b9385e1b1
+    position: 0
+    options_json:
+    field_guid: 0573fa06-2a26-4cbd-bd79-994b076a5f57
+    column_type: columns
+    aggregation_type:
+  - guid: a4fe8206-79b6-426c-ab57-4cc127b73286
+    position: 1
+    options_json:
+    field_guid: 0519b304-2124-4a06-b55e-f39f181864ce
+    column_type: columns
+    aggregation_type:
+  - guid: ba12a023-7167-4e5c-a4b1-96b5542404d0
+    position: 2
+    options_json:
+    field_guid: ad889a09-63ad-4b8a-ad78-ff06ac27fd8d
+    column_type: columns
+    aggregation_type:
+  - guid: 807056e8-7bc0-42ec-85ff-80fe24da6c2a
+    position: 3
+    options_json:
+    field_guid: 1d13dbc2-5b40-41c1-856e-fbebab1d7fb2
+    column_type: columns
+    aggregation_type:
+- guid: 03413aa8-a5dd-40ca-a6eb-9c5f14611015
+  name: CFO Approval
+  db_name: Cfo
+  position: 4
+  options_json: '{"enableQuickSearch":true,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0,"enableTitle":true}'
+  is_default_view: false
+  columns:
+  - guid: e87c287e-27c1-4eb8-85cc-e41f2c925b4b
+    position: 0
+    options_json:
+    field_guid: 0573fa06-2a26-4cbd-bd79-994b076a5f57
+    column_type: columns
+    aggregation_type:
+  - guid: 3ddaa81e-eb59-4cdc-b777-1ff7c2bc9b35
+    position: 1
+    options_json:
+    field_guid: 0519b304-2124-4a06-b55e-f39f181864ce
+    column_type: columns
+    aggregation_type:
+  - guid: 692d5110-578d-4804-9830-0c6287511212
+    position: 2
+    options_json:
+    field_guid: ad889a09-63ad-4b8a-ad78-ff06ac27fd8d
+    column_type: columns
+    aggregation_type:
+  - guid: b6eef252-20f5-45eb-bfe3-7df8786eb8e2
+    position: 3
+    options_json:
+    field_guid: 1d13dbc2-5b40-41c1-856e-fbebab1d7fb2
+    column_type: columns
+    aggregation_type:
+AxRoles:
+- guid: e75151db-1013-49fa-b723-4a17858d9e37
+  name: All users
+  icon:
+  is_dynamic: false
+- guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  name: Author
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 689873e4-1479-48ee-be27-d406dc9dffa8
+  name: Finance dep
+  icon:
+  is_dynamic: false
+- guid: ae003950-2b15-4633-a71d-cd66c19d4654
+  name: CFO dep
+  icon:
+  is_dynamic: false
+- guid: f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  name: Is Real Estate
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: b90b360a-8905-4afe-b8b1-2d4243e91b94
+  name: Is Vehicle
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 1559eac4-5945-41a7-ab66-c51fcfe88280
+  name: Is Machinery
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: d31662ba-e534-4f36-8d8c-4b76772f78e8
+  name: Is Office Furnitures and Fittings
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 890f94d5-6402-4140-9004-f96826d2a3d3
+  name: Is Computer Hardware
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  name: Is Software
+  icon: fas fa-user-cog
+  is_dynamic: true
+- guid: 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+  name: Is Patent/ License
+  icon: fas fa-user-cog
+  is_dynamic: true
+AxStates:
+- guid: 7fc4fa88-c41a-4f7d-8de4-f7cf01d533cc
+  name: Start
+  is_start: true
+  is_deleted: false
+  is_all: false
+  x: -346.2334289550781
+  y: -213.04147338867188
+  roles:
+  - e75151db-1013-49fa-b723-4a17858d9e37
+- guid: 1f59b023-df2c-4b4a-b512-30576fa8262c
+  name: Deleted
+  is_start: false
+  is_deleted: true
+  is_all: false
+  x: -81.0
+  y: 143.0
+  roles: []
+- guid: ae1ea51f-1416-4f19-b7ae-d827e3b6ba63
+  name: All
+  is_start: false
+  is_deleted: false
+  is_all: true
+  x: -76.0
+  y: 338.0
+  roles: []
+- guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  name: Adding details
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: -341.296875
+  y: -73.5
+  roles:
+  - e75151db-1013-49fa-b723-4a17858d9e37
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  - f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  - b90b360a-8905-4afe-b8b1-2d4243e91b94
+  - d31662ba-e534-4f36-8d8c-4b76772f78e8
+  - 1559eac4-5945-41a7-ab66-c51fcfe88280
+  - 890f94d5-6402-4140-9004-f96826d2a3d3
+  - 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  - 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+- guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  name: Finance Processing
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: -338.296875
+  y: 65.5
+  roles:
+  - e75151db-1013-49fa-b723-4a17858d9e37
+  - 689873e4-1479-48ee-be27-d406dc9dffa8
+  - f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  - b90b360a-8905-4afe-b8b1-2d4243e91b94
+  - d31662ba-e534-4f36-8d8c-4b76772f78e8
+  - 1559eac4-5945-41a7-ab66-c51fcfe88280
+  - 890f94d5-6402-4140-9004-f96826d2a3d3
+  - 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  - 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
+- guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  name: CFO Approval
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: -337.296875
+  y: 196.5
+  roles:
+  - e75151db-1013-49fa-b723-4a17858d9e37
+  - ae003950-2b15-4633-a71d-cd66c19d4654
+  - f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  - b90b360a-8905-4afe-b8b1-2d4243e91b94
+  - d31662ba-e534-4f36-8d8c-4b76772f78e8
+  - 1559eac4-5945-41a7-ab66-c51fcfe88280
+  - 890f94d5-6402-4140-9004-f96826d2a3d3
+  - 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  - 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
+- guid: 11ba8ee4-ddad-4489-bbf0-c46ad77e60de
+  name: Archive
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: -337.296875
+  y: 319.5
+  roles:
+  - 689873e4-1479-48ee-be27-d406dc9dffa8
+  - ae003950-2b15-4633-a71d-cd66c19d4654
+AxActions:
+- guid: 50a16702-4fbb-4fdf-a102-3712f521cca0
+  name: Update
+  db_name:
+  from_state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  to_state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
+- guid: 572fe7de-a562-46ed-8305-9f8a82d59a81
+  name: Update
+  db_name:
+  from_state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  to_state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 689873e4-1479-48ee-be27-d406dc9dffa8
+- guid: e44b33c9-a799-4779-8cc7-4696ecec0289
+  name: Update
+  db_name:
+  from_state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  to_state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - ae003950-2b15-4633-a71d-cd66c19d4654
+- guid: 9947ab03-8d23-4b41-bfb2-4117c83e3752
+  name: To finance processing
+  db_name:
+  from_state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  to_state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  confirm_text:
+  close_modal: true
+  icon:
+  radius: 0.0
+  roles:
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
+- guid: 0e97fab4-8945-4d7d-b2ca-6e293b13d91c
+  name: To CFO approval
+  db_name:
+  from_state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  to_state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 689873e4-1479-48ee-be27-d406dc9dffa8
+- guid: 1ee696c7-8614-41cd-98f1-6de7253e372f
+  name: Archive
+  db_name:
+  from_state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  to_state_guid: 11ba8ee4-ddad-4489-bbf0-c46ad77e60de
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - ae003950-2b15-4633-a71d-cd66c19d4654
+- guid: 27934c75-9aa8-437d-941c-ea2c66d30058
+  name: Cancel
+  db_name:
+  from_state_guid: ae1ea51f-1416-4f19-b7ae-d827e3b6ba63
+  to_state_guid: 11ba8ee4-ddad-4489-bbf0-c46ad77e60de
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles: []
+- guid: c0b44a2a-0fd2-49f2-bd68-c34967beda32
+  name: Create request
+  db_name:
+  from_state_guid: 7fc4fa88-c41a-4f7d-8de4-f7cf01d533cc
+  to_state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - e75151db-1013-49fa-b723-4a17858d9e37
+AxRoleFieldPermission:
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 7fc4fa88-c41a-4f7d-8de4-f7cf01d533cc
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 0573fa06-2a26-4cbd-bd79-994b076a5f57
+  read: true
+  edit: false
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: ad889a09-63ad-4b8a-ad78-ff06ac27fd8d
+  read: true
+  edit: false
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 5983325b-6ca0-4f7f-ad98-239f05bad257
+  read: true
+  edit: false
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 1d13dbc2-5b40-41c1-856e-fbebab1d7fb2
+  read: true
+  edit: false
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 0a97c67a-d561-4547-8966-a6c6a9389bc7
+  read: true
+  edit: false
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 5df9e190-9873-426d-8c8a-aa762df1a38a
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 5df9e190-9873-426d-8c8a-aa762df1a38a
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 5df9e190-9873-426d-8c8a-aa762df1a38a
+  field_guid: 49b707e0-8958-489a-b68e-9257194b86ed
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: feef5ede-9196-433f-93a5-0fb8f3e01f7c
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: feef5ede-9196-433f-93a5-0fb8f3e01f7c
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: feef5ede-9196-433f-93a5-0fb8f3e01f7c
+  field_guid: 73476621-e6c9-47b8-b2d1-0dfe77dfc631
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 746a441b-24b3-4205-9961-a49cfd63b0df
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 746a441b-24b3-4205-9961-a49cfd63b0df
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 746a441b-24b3-4205-9961-a49cfd63b0df
+  field_guid: be6d878b-4492-4c59-9d52-c13ccfb63e38
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 8599baad-822a-47c9-a61e-4a9375048037
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 8599baad-822a-47c9-a61e-4a9375048037
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 8599baad-822a-47c9-a61e-4a9375048037
+  field_guid: 8cd57c40-6985-4ffd-9d9a-45335e6ab6ab
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: c3841eac-c0f5-4a52-bc99-e5277c678563
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: c3841eac-c0f5-4a52-bc99-e5277c678563
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: c3841eac-c0f5-4a52-bc99-e5277c678563
+  field_guid: 2a934616-3cb1-4352-b177-7de5461acefd
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: 6f60f88c-29a4-423e-827b-8470d3ad19c6
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 6f60f88c-29a4-423e-827b-8470d3ad19c6
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 6f60f88c-29a4-423e-827b-8470d3ad19c6
+  field_guid: 84c1e299-05cb-4761-9749-758ba4da7874
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+  read: true
+  edit: true
+- role_guid: b90b360a-8905-4afe-b8b1-2d4243e91b94
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 49b707e0-8958-489a-b68e-9257194b86ed
+  read: true
+  edit: true
+- role_guid: d31662ba-e534-4f36-8d8c-4b76772f78e8
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 73476621-e6c9-47b8-b2d1-0dfe77dfc631
+  read: true
+  edit: true
+- role_guid: 1559eac4-5945-41a7-ab66-c51fcfe88280
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: be6d878b-4492-4c59-9d52-c13ccfb63e38
+  read: true
+  edit: true
+- role_guid: 890f94d5-6402-4140-9004-f96826d2a3d3
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 8cd57c40-6985-4ffd-9d9a-45335e6ab6ab
+  read: true
+  edit: true
+- role_guid: 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 96ba7862-57fb-4df5-ace6-dee809306632
+  read: true
+  edit: true
+- role_guid: 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+  state_guid: 27543c64-7bef-4984-b8f8-c583d034dc55
+  field_guid: 84c1e299-05cb-4761-9749-758ba4da7874
+  read: true
+  edit: true
+- role_guid: 689873e4-1479-48ee-be27-d406dc9dffa8
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+  read: true
+  edit: false
+- role_guid: b90b360a-8905-4afe-b8b1-2d4243e91b94
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 49b707e0-8958-489a-b68e-9257194b86ed
+  read: true
+  edit: false
+- role_guid: d31662ba-e534-4f36-8d8c-4b76772f78e8
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 73476621-e6c9-47b8-b2d1-0dfe77dfc631
+  read: true
+  edit: false
+- role_guid: 1559eac4-5945-41a7-ab66-c51fcfe88280
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: be6d878b-4492-4c59-9d52-c13ccfb63e38
+  read: true
+  edit: false
+- role_guid: 890f94d5-6402-4140-9004-f96826d2a3d3
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 8cd57c40-6985-4ffd-9d9a-45335e6ab6ab
+  read: true
+  edit: false
+- role_guid: 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 96ba7862-57fb-4df5-ace6-dee809306632
+  read: true
+  edit: false
+- role_guid: 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 84c1e299-05cb-4761-9749-758ba4da7874
+  read: true
+  edit: false
+- role_guid: 689873e4-1479-48ee-be27-d406dc9dffa8
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 260de877-425c-4f98-af38-4e6ee1bed37d
+  read: true
+  edit: true
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 260de877-425c-4f98-af38-4e6ee1bed37d
+  read: false
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: e7f3ca89-50cc-4751-8a2f-7ee2e84f8107
+  field_guid: 73b8da00-ed36-4fa5-8eb7-a156d32709af
+  read: true
+  edit: false
+- role_guid: e75151db-1013-49fa-b723-4a17858d9e37
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: false
+- role_guid: ae003950-2b15-4633-a71d-cd66c19d4654
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: fc983935-537b-4ee1-8aa2-8c3431e314b4
+  read: true
+  edit: true
+- role_guid: f71ec454-d4f0-4377-9bcf-1d28ba7de749
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: e0ecfb7f-6e2d-4cc5-95b9-98fee8dfc1c7
+  read: true
+  edit: false
+- role_guid: b90b360a-8905-4afe-b8b1-2d4243e91b94
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: 49b707e0-8958-489a-b68e-9257194b86ed
+  read: true
+  edit: false
+- role_guid: d31662ba-e534-4f36-8d8c-4b76772f78e8
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: 73476621-e6c9-47b8-b2d1-0dfe77dfc631
+  read: true
+  edit: false
+- role_guid: 1559eac4-5945-41a7-ab66-c51fcfe88280
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: be6d878b-4492-4c59-9d52-c13ccfb63e38
+  read: true
+  edit: false
+- role_guid: 890f94d5-6402-4140-9004-f96826d2a3d3
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: 8cd57c40-6985-4ffd-9d9a-45335e6ab6ab
+  read: true
+  edit: false
+- role_guid: 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: 96ba7862-57fb-4df5-ace6-dee809306632
+  read: true
+  edit: false
+- role_guid: 4dd68404-c496-4dd4-b3d9-333d4b9dc239
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: 84c1e299-05cb-4761-9749-758ba4da7874
+  read: true
+  edit: false
+- role_guid: bef37cfe-c615-4bdc-a5b3-f3b64e443702
+  state_guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
+  field_guid: 260de877-425c-4f98-af38-4e6ee1bed37d
+  read: true
+  edit: false
+- role_guid: 689873e4-1479-48ee-be27-d406dc9dffa8
+  state_guid: 11ba8ee4-ddad-4489-bbf0-c46ad77e60de
+  field_guid: None
+  read: true
+  edit: false
+- role_guid: ae003950-2b15-4633-a71d-cd66c19d4654
+  state_guid: 11ba8ee4-ddad-4489-bbf0-c46ad77e60de
+  field_guid: None
+  read: true
+  edit: false

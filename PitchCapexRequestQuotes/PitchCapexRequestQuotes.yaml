@@ -1,0 +1,160 @@
+AxForm:
+  guid: 7d01c055-6cfa-4201-ab13-c70f9fd71884
+  name: Quotes
+  db_name: PitchCapexRequestQuotes
+  parent: aa18f4d5-c97a-4d3e-b908-4dce15011d15
+  position: 5
+  tom_label: '{{guid}}'
+  icon: dice-d6
+AxFields:
+- guid: d9876798-9f82-41fd-88d5-9cc8f6685593
+  name: Default tab
+  db_name:
+  position: 0
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 3bbdc5e9-f3c0-4da0-9b0d-663f1e48cf4b
+  name: Registration number
+  db_name: axNum
+  position: 0
+  options_json: '{"comparator":"string"}'
+  private_options_json: '{"algorithm":"# first value of counter\nif not ax.counter:\n    ax.counter=1\n#
+    ax.value will be registration number\nax.value=f\"Q{ax.counter}\"\n# Increment
+    counter\nax.counter=str(int(ax.counter) + 1)","counterKey":"7d01c055-6cfa-4201-ab13-c70f9fd71884"}'
+  field_type_tag: AxNum
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: d9876798-9f82-41fd-88d5-9cc8f6685593
+- guid: 70e0fe96-1457-4800-a283-e730ca0d15df
+  name: Vendor name
+  db_name: vendor
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: d9876798-9f82-41fd-88d5-9cc8f6685593
+- guid: 35d7722b-c386-484f-b470-90715e020eb7
+  name: Quotation Amount
+  db_name: amount
+  position: 2
+  options_json: '{"decimalCharacter":",","decimalPlaces":2,"digitGroupSeparator":"
+    ","wheelStep":1,"minimumValue":0,"currencySymbol":"$"}'
+  private_options_json:
+  field_type_tag: AxDecimal
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: d9876798-9f82-41fd-88d5-9cc8f6685593
+- guid: aebacc4b-93d5-4751-badc-99e00571713e
+  name: Notes
+  db_name: notes
+  position: 3
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxText
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: d9876798-9f82-41fd-88d5-9cc8f6685593
+AxMetrics: []
+AxGrids:
+- guid: f95e87f7-bd40-40ed-b753-ca07d4fa2aec
+  name: Default grid
+  db_name: Default
+  position: 1
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0}'
+  is_default_view: true
+  columns: []
+AxRoles:
+- guid: e6d34a9d-e5ad-4883-a911-d249abba4725
+  name: Capex dep
+  icon:
+  is_dynamic: false
+AxStates:
+- guid: ff678968-a9e1-487b-9df9-337e747b81e0
+  name: Start
+  is_start: true
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: -200.0
+  roles:
+  - e6d34a9d-e5ad-4883-a911-d249abba4725
+- guid: 07a36a60-86b0-441d-8529-40a8e313cf3a
+  name: Created
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: 0.0
+  roles:
+  - e6d34a9d-e5ad-4883-a911-d249abba4725
+- guid: 75956d63-dea8-4f1d-b68e-bee2b076cddc
+  name: Deleted
+  is_start: false
+  is_deleted: true
+  is_all: false
+  x: 0.0
+  y: 200.0
+  roles: []
+- guid: d1ddbfdc-afb9-45b0-8fb7-092da3a12cd4
+  name: All
+  is_start: false
+  is_deleted: false
+  is_all: true
+  x: 300.0
+  y: 20.0
+  roles: []
+AxActions:
+- guid: 2c6426de-8916-46fc-b583-76888e0a9095
+  name: Add quote
+  db_name:
+  from_state_guid: ff678968-a9e1-487b-9df9-337e747b81e0
+  to_state_guid: 07a36a60-86b0-441d-8529-40a8e313cf3a
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - e6d34a9d-e5ad-4883-a911-d249abba4725
+- guid: 33b5ccc4-0d4d-49ca-a5b6-ccd28c977fc2
+  name: Update
+  db_name:
+  from_state_guid: 07a36a60-86b0-441d-8529-40a8e313cf3a
+  to_state_guid: 07a36a60-86b0-441d-8529-40a8e313cf3a
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - e6d34a9d-e5ad-4883-a911-d249abba4725
+- guid: b8883665-228f-4dc5-bf9e-63b829a4f05c
+  name: Delete record
+  db_name:
+  from_state_guid: 07a36a60-86b0-441d-8529-40a8e313cf3a
+  to_state_guid: 75956d63-dea8-4f1d-b68e-bee2b076cddc
+  confirm_text: Are you sure you want to delete record?
+  close_modal: true
+  icon:
+  radius:
+  roles: []
+AxRoleFieldPermission:
+- role_guid: e6d34a9d-e5ad-4883-a911-d249abba4725
+  state_guid: ff678968-a9e1-487b-9df9-337e747b81e0
+  field_guid: None
+  read: true
+  edit: true
+- role_guid: e6d34a9d-e5ad-4883-a911-d249abba4725
+  state_guid: 07a36a60-86b0-441d-8529-40a8e313cf3a
+  field_guid: None
+  read: true
+  edit: true

@@ -1,0 +1,38 @@
+Code name: pitch-capex-request
+Root folder: a83c3624-11ae-4ab5-a251-bfbc962d57bd
+Forms:
+- PitchCapexRequest
+- PitchCapexRequestVehicles
+- PitchCapexRequestMachinery
+- PitchCapexRequestFurnitures
+- PitchCapexRequestHardware
+- PitchCapexRequestSoftware
+- PitchCapexRequestQuotes
+Folders:
+- guid: a83c3624-11ae-4ab5-a251-bfbc962d57bd
+  name: CAPEX Request
+  parent: None
+  position: '0'
+Root page: 11e86cac-3a00-45fc-adf7-b876cc7f5606
+Pages:
+- guid: 11e86cac-3a00-45fc-adf7-b876cc7f5606
+  name: Pitch CAPEX Request
+  db_name: PitchCapexRequest
+  position:
+  parent: 7ac81f1f-6168-4576-827f-37b5be6e32d8
+- guid: 66594c9f-e856-40e1-b580-5febe4798893
+  name: My requests
+  db_name:
+  position:
+  parent: 11e86cac-3a00-45fc-adf7-b876cc7f5606
+- guid: a61295f0-c218-4aec-9d7e-ead37102ad4f
+  name: CFO Approval
+  db_name:
+  position:
+  parent: 11e86cac-3a00-45fc-adf7-b876cc7f5606
+- guid: bb6af1e2-57d5-4c78-80a2-8298b411d6ad
+  name: Finance Processing
+  db_name:
+  position:
+  parent: 11e86cac-3a00-45fc-adf7-b876cc7f5606
+Ax version: 0.34.0

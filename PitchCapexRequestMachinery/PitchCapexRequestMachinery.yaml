@@ -1,0 +1,197 @@
+AxForm:
+  guid: 007f1941-4013-4f97-bbb0-677a9fb7af3f
+  name: Machinery
+  db_name: PitchCapexRequestMachinery
+  parent: aa18f4d5-c97a-4d3e-b908-4dce15011d15
+  position: 4
+  tom_label: '{{guid}}'
+  icon: dice-d6
+AxFields:
+- guid: 79ed7908-9068-4843-8d8f-bb25c782add2
+  name: Author
+  db_name: author
+  position: 0
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxAuthor
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 4515e6be-84fd-46b4-93dd-fc059796b548
+- guid: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+  name: Default tab
+  db_name:
+  position: 1
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: cd6f0ec9-0108-4ff1-bad5-b0d7d08aa61f
+  name: Equipment Name
+  db_name: name
+  position: 1
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+- guid: 84d8b6ce-d065-4d2c-8684-e19e9d6f605b
+  name: Quantity
+  db_name: quantity
+  position: 2
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxInteger
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+- guid: 4515e6be-84fd-46b4-93dd-fc059796b548
+  name: Tech
+  db_name:
+  position: 2
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: cd8a2d0a-ee67-40bd-a4f1-3ad7af39b5e0
+  name: Justification
+  db_name: justification
+  position: 3
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+AxMetrics: []
+AxGrids:
+- guid: 612db7e7-67ad-4e51-8230-e604ddfa613e
+  name: Default grid
+  db_name: Default
+  position: 1
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0,"widths":{"quantity":146,"name":260},"enableTitle":true}'
+  is_default_view: true
+  columns:
+  - guid: f852386e-43c1-4cdf-bb70-3f6b5d3dd971
+    position: 0
+    options_json:
+    field_guid: cd6f0ec9-0108-4ff1-bad5-b0d7d08aa61f
+    column_type: columns
+    aggregation_type:
+  - guid: ec732972-8b99-421e-aaf7-9851523525b2
+    position: 1
+    options_json:
+    field_guid: 84d8b6ce-d065-4d2c-8684-e19e9d6f605b
+    column_type: columns
+    aggregation_type:
+  - guid: fda1e1b2-42f2-499d-85a9-4a3683a6b0e2
+    position: 2
+    options_json:
+    field_guid: cd8a2d0a-ee67-40bd-a4f1-3ad7af39b5e0
+    column_type: columns
+    aggregation_type:
+AxRoles:
+- guid: 96b9286b-ce9c-437e-8e68-94b010363be4
+  name: All users
+  icon:
+  is_dynamic: false
+- guid: 13dd9459-b621-48e3-9e19-bb10199421ee
+  name: Author
+  icon: fas fa-user-cog
+  is_dynamic: true
+AxStates:
+- guid: 097e0adc-7525-449e-86a3-92ce577e36b4
+  name: Start
+  is_start: true
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: -200.0
+  roles:
+  - 96b9286b-ce9c-437e-8e68-94b010363be4
+- guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  name: Created
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: 0.0
+  roles:
+  - 13dd9459-b621-48e3-9e19-bb10199421ee
+  - 96b9286b-ce9c-437e-8e68-94b010363be4
+- guid: d83980ad-0a8f-4dfc-bdd6-6160e1e98412
+  name: Deleted
+  is_start: false
+  is_deleted: true
+  is_all: false
+  x: 0.0
+  y: 200.0
+  roles: []
+- guid: c7570812-f800-471a-8fad-7c7a5d7835b1
+  name: All
+  is_start: false
+  is_deleted: false
+  is_all: true
+  x: 300.0
+  y: 20.0
+  roles: []
+AxActions:
+- guid: 9145cb4a-c505-47a6-a012-084b93d67a79
+  name: Add record
+  db_name:
+  from_state_guid: 097e0adc-7525-449e-86a3-92ce577e36b4
+  to_state_guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 96b9286b-ce9c-437e-8e68-94b010363be4
+- guid: 3dd8e636-7f37-4c33-849b-ff0d4dc0d657
+  name: Update
+  db_name:
+  from_state_guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  to_state_guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 13dd9459-b621-48e3-9e19-bb10199421ee
+- guid: 7b535c33-6282-4e68-96c8-a5526032b421
+  name: Delete record
+  db_name:
+  from_state_guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  to_state_guid: d83980ad-0a8f-4dfc-bdd6-6160e1e98412
+  confirm_text: Are you sure you want to delete record?
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 13dd9459-b621-48e3-9e19-bb10199421ee
+AxRoleFieldPermission:
+- role_guid: 96b9286b-ce9c-437e-8e68-94b010363be4
+  state_guid: 097e0adc-7525-449e-86a3-92ce577e36b4
+  field_guid: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+  read: true
+  edit: true
+- role_guid: 13dd9459-b621-48e3-9e19-bb10199421ee
+  state_guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  field_guid: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+  read: true
+  edit: true
+- role_guid: 96b9286b-ce9c-437e-8e68-94b010363be4
+  state_guid: 4306e0e7-ca57-4066-864a-883bcda54f33
+  field_guid: 0cd38c16-64a5-40e3-a2cf-b108eaf5e23f
+  read: true
+  edit: false

@@ -1,0 +1,216 @@
+AxForm:
+  guid: ec884877-a28f-4882-81e4-356c08cd3b2c
+  name: Vehicles
+  db_name: PitchCapexRequestVehicles
+  parent: aa18f4d5-c97a-4d3e-b908-4dce15011d15
+  position: 3
+  tom_label: '{{guid}}'
+  icon: dice-d6
+AxFields:
+- guid: e9018038-fcad-4e38-83cb-36e41c25009c
+  name: Author
+  db_name: author
+  position: 0
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxAuthor
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: 5c8cf150-5e4e-4af2-aa9a-7b6b2fe0e5cb
+- guid: f790c2e4-a865-418e-b789-5d74ef81be21
+  name: Default tab
+  db_name:
+  position: 1
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: b320b0df-d7a1-41b1-9f9a-b053dd98d9b2
+  name: 'Type of Vehicle '
+  db_name: type
+  position: 1
+  options_json: '{"items":"[\n    {\"text\": \"Passenger Vehicle - 2 Wheeler\", \"value\":
+    \"1\" }\n    {\"text\": \"Passenger Vehicle - 4 Wheeler\", \"value\": \"2\" }\n    {\"text\":
+    \"Heavy Vehicle - 4 Wheeler\", \"value\": \"3\" }\n    {\"text\": \"Heavy Vehicle
+    - 6 Wheeler\", \"value\": \"4\" }\n]"}'
+  private_options_json:
+  field_type_tag: AxChoise
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: f790c2e4-a865-418e-b789-5d74ef81be21
+- guid: 3af2ed3e-fff0-40be-99a9-25aace846ebd
+  name: Vehicle Model Name
+  db_name: model
+  position: 2
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: f790c2e4-a865-418e-b789-5d74ef81be21
+- guid: 5c8cf150-5e4e-4af2-aa9a-7b6b2fe0e5cb
+  name: Tech
+  db_name:
+  position: 2
+  options_json:
+  private_options_json:
+  field_type_tag:
+  is_tab: true
+  is_required: false
+  is_whole_row: false
+  parent: None
+- guid: 4a31afa5-84ba-401b-9e31-c612f1258f5d
+  name: Quantity
+  db_name: quantity
+  position: 3
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxInteger
+  is_tab: false
+  is_required: false
+  is_whole_row: false
+  parent: f790c2e4-a865-418e-b789-5d74ef81be21
+- guid: 22469ea4-096a-41e2-8d06-83b382755925
+  name: Justification
+  db_name: justification
+  position: 4
+  options_json: '{}'
+  private_options_json:
+  field_type_tag: AxString
+  is_tab: false
+  is_required: false
+  is_whole_row: true
+  parent: f790c2e4-a865-418e-b789-5d74ef81be21
+AxMetrics: []
+AxGrids:
+- guid: b8c88834-51c9-41c3-9775-2bd98e76d7df
+  name: Default grid
+  db_name: Default
+  position: 1
+  options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0,"widths":{"quantity":114,"model":215},"enableTitle":true}'
+  is_default_view: true
+  columns:
+  - guid: 037e45d4-fdb7-4ebc-b7e7-c16bb2412070
+    position: 0
+    options_json:
+    field_guid: b320b0df-d7a1-41b1-9f9a-b053dd98d9b2
+    column_type: columns
+    aggregation_type:
+  - guid: 71647f09-6279-477d-9f6d-6349c49a1a36
+    position: 1
+    options_json:
+    field_guid: 3af2ed3e-fff0-40be-99a9-25aace846ebd
+    column_type: columns
+    aggregation_type:
+  - guid: cbcf9008-7c0a-42c7-a6c7-f9bac367bdac
+    position: 2
+    options_json:
+    field_guid: 4a31afa5-84ba-401b-9e31-c612f1258f5d
+    column_type: columns
+    aggregation_type:
+  - guid: 1241fc20-240a-4a7a-890e-9441c533c0e0
+    position: 3
+    options_json:
+    field_guid: 22469ea4-096a-41e2-8d06-83b382755925
+    column_type: columns
+    aggregation_type:
+AxRoles:
+- guid: bd6eca88-e441-4282-ab9d-d81178405af4
+  name: All users
+  icon:
+  is_dynamic: false
+- guid: 00a34be1-09d1-4bd2-a2ef-b4ddcc324549
+  name: Author
+  icon: fas fa-user-cog
+  is_dynamic: true
+AxStates:
+- guid: d2f3f559-78b8-4960-ac40-7b12c19434c8
+  name: Start
+  is_start: true
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: -199.0
+  roles:
+  - bd6eca88-e441-4282-ab9d-d81178405af4
+- guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  name: Created
+  is_start: false
+  is_deleted: false
+  is_all: false
+  x: 0.0
+  y: 0.0
+  roles:
+  - bd6eca88-e441-4282-ab9d-d81178405af4
+  - 00a34be1-09d1-4bd2-a2ef-b4ddcc324549
+- guid: db3ce078-bdac-49a4-955d-b1448656e6bc
+  name: Deleted
+  is_start: false
+  is_deleted: true
+  is_all: false
+  x: 0.0
+  y: 200.0
+  roles: []
+- guid: 648b4096-b1fd-479d-ab82-9b711948a238
+  name: All
+  is_start: false
+  is_deleted: false
+  is_all: true
+  x: 300.0
+  y: 20.0
+  roles: []
+AxActions:
+- guid: 5d1b9ded-3da8-4c4d-89f4-d61343d2303a
+  name: Add record
+  db_name:
+  from_state_guid: d2f3f559-78b8-4960-ac40-7b12c19434c8
+  to_state_guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - bd6eca88-e441-4282-ab9d-d81178405af4
+- guid: 59e4ebed-e65b-4333-9187-0a32e381505d
+  name: Update
+  db_name:
+  from_state_guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  to_state_guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  confirm_text:
+  close_modal: true
+  icon:
+  radius:
+  roles:
+  - 00a34be1-09d1-4bd2-a2ef-b4ddcc324549
+- guid: af623bec-2a38-4601-a029-41ac69e43fa8
+  name: Delete record
+  db_name:
+  from_state_guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  to_state_guid: db3ce078-bdac-49a4-955d-b1448656e6bc
+  confirm_text: Are you sure you want to delete record?
+  close_modal: true
+  icon:
+  radius:
+  roles: []
+AxRoleFieldPermission:
+- role_guid: bd6eca88-e441-4282-ab9d-d81178405af4
+  state_guid: d2f3f559-78b8-4960-ac40-7b12c19434c8
+  field_guid: f790c2e4-a865-418e-b789-5d74ef81be21
+  read: true
+  edit: true
+- role_guid: bd6eca88-e441-4282-ab9d-d81178405af4
+  state_guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  field_guid: f790c2e4-a865-418e-b789-5d74ef81be21
+  read: true
+  edit: false
+- role_guid: 00a34be1-09d1-4bd2-a2ef-b4ddcc324549
+  state_guid: a7d591c2-1fbe-45cc-880b-0b5a8043e00d
+  field_guid: f790c2e4-a865-418e-b789-5d74ef81be21
+  read: true
+  edit: true
