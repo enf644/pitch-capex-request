@@ -4,7 +4,7 @@ Request to get a capital expenditure approved.
 **Tags:** #Finance & Operations
 
 **Form:**
-![alt text](https://raw.githubusercontent.com/enf644/pitch-capex-request/master/docs/form.png)
+<img src="https://raw.githubusercontent.com/enf644/pitch-capex-request/master/docs/form.png" width="600">
 
 **Workflow:**
-![alt text](https://github.com/enf644/pitch-capex-request/raw/master/docs/workflow.gif)
+<img src="https://github.com/enf644/pitch-capex-request/raw/master/docs/workflow.gif" width="600">

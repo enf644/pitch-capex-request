@@ -556,8 +556,8 @@ AxStates:
   is_start: true
   is_deleted: false
   is_all: false
-  x: -346.2334289550781
-  y: -213.04147338867188
+  x: -346.233428955078
+  y: -213.041473388672
   roles:
   - e75151db-1013-49fa-b723-4a17858d9e37
 - guid: 1f59b023-df2c-4b4a-b512-30576fa8262c
@@ -588,8 +588,8 @@ AxStates:
   - bef37cfe-c615-4bdc-a5b3-f3b64e443702
   - f71ec454-d4f0-4377-9bcf-1d28ba7de749
   - b90b360a-8905-4afe-b8b1-2d4243e91b94
-  - d31662ba-e534-4f36-8d8c-4b76772f78e8
   - 1559eac4-5945-41a7-ab66-c51fcfe88280
+  - d31662ba-e534-4f36-8d8c-4b76772f78e8
   - 890f94d5-6402-4140-9004-f96826d2a3d3
   - 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
   - 4dd68404-c496-4dd4-b3d9-333d4b9dc239
@@ -602,15 +602,15 @@ AxStates:
   y: 65.5
   roles:
   - e75151db-1013-49fa-b723-4a17858d9e37
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
   - 689873e4-1479-48ee-be27-d406dc9dffa8
   - f71ec454-d4f0-4377-9bcf-1d28ba7de749
   - b90b360a-8905-4afe-b8b1-2d4243e91b94
-  - d31662ba-e534-4f36-8d8c-4b76772f78e8
   - 1559eac4-5945-41a7-ab66-c51fcfe88280
+  - d31662ba-e534-4f36-8d8c-4b76772f78e8
   - 890f94d5-6402-4140-9004-f96826d2a3d3
   - 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
   - 4dd68404-c496-4dd4-b3d9-333d4b9dc239
-  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
 - guid: c0fe0e7c-89a9-4d06-9745-689cb6fa0f4e
   name: CFO Approval
   is_start: false
@@ -620,15 +620,15 @@ AxStates:
   y: 196.5
   roles:
   - e75151db-1013-49fa-b723-4a17858d9e37
+  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
   - ae003950-2b15-4633-a71d-cd66c19d4654
   - f71ec454-d4f0-4377-9bcf-1d28ba7de749
   - b90b360a-8905-4afe-b8b1-2d4243e91b94
-  - d31662ba-e534-4f36-8d8c-4b76772f78e8
   - 1559eac4-5945-41a7-ab66-c51fcfe88280
+  - d31662ba-e534-4f36-8d8c-4b76772f78e8
   - 890f94d5-6402-4140-9004-f96826d2a3d3
   - 838d6b1f-a192-4de4-a1b5-7f10b7d4a993
   - 4dd68404-c496-4dd4-b3d9-333d4b9dc239
-  - bef37cfe-c615-4bdc-a5b3-f3b64e443702
 - guid: 11ba8ee4-ddad-4489-bbf0-c46ad77e60de
   name: Archive
   is_start: false
@@ -648,7 +648,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - bef37cfe-c615-4bdc-a5b3-f3b64e443702
 - guid: 572fe7de-a562-46ed-8305-9f8a82d59a81
@@ -659,7 +659,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 689873e4-1479-48ee-be27-d406dc9dffa8
 - guid: e44b33c9-a799-4779-8cc7-4696ecec0289
@@ -670,7 +670,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - ae003950-2b15-4633-a71d-cd66c19d4654
 - guid: 9947ab03-8d23-4b41-bfb2-4117c83e3752
@@ -692,7 +692,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 689873e4-1479-48ee-be27-d406dc9dffa8
 - guid: 1ee696c7-8614-41cd-98f1-6de7253e372f
@@ -703,7 +703,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - ae003950-2b15-4633-a71d-cd66c19d4654
 - guid: 27934c75-9aa8-437d-941c-ea2c66d30058
@@ -714,7 +714,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles: []
 - guid: c0b44a2a-0fd2-49f2-bd68-c34967beda32
   name: Create request
@@ -724,7 +724,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - e75151db-1013-49fa-b723-4a17858d9e37
 AxRoleFieldPermission:

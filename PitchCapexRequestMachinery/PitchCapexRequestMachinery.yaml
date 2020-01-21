@@ -127,8 +127,8 @@ AxStates:
   x: 0.0
   y: 0.0
   roles:
-  - 13dd9459-b621-48e3-9e19-bb10199421ee
   - 96b9286b-ce9c-437e-8e68-94b010363be4
+  - 13dd9459-b621-48e3-9e19-bb10199421ee
 - guid: d83980ad-0a8f-4dfc-bdd6-6160e1e98412
   name: Deleted
   is_start: false
@@ -154,7 +154,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 96b9286b-ce9c-437e-8e68-94b010363be4
 - guid: 3dd8e636-7f37-4c33-849b-ff0d4dc0d657
@@ -165,7 +165,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 13dd9459-b621-48e3-9e19-bb10199421ee
 - guid: 7b535c33-6282-4e68-96c8-a5526032b421
@@ -176,7 +176,7 @@ AxActions:
   confirm_text: Are you sure you want to delete record?
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 13dd9459-b621-48e3-9e19-bb10199421ee
 AxRoleFieldPermission:

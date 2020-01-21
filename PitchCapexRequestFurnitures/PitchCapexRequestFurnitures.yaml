@@ -154,7 +154,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 21285054-850a-4b6e-a993-43c34c0d0a47
 - guid: 2e337f57-d85b-45cb-89bb-10979fdf15d9
@@ -165,7 +165,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 103fe0a5-c6a5-400b-ab0d-735a11a624dd
 - guid: 8f281732-3e95-4abf-bfb4-aae9054b0714
@@ -176,7 +176,7 @@ AxActions:
   confirm_text: Are you sure you want to delete record?
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - 103fe0a5-c6a5-400b-ab0d-735a11a624dd
 AxRoleFieldPermission:

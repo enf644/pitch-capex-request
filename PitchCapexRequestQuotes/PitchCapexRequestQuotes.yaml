@@ -73,7 +73,25 @@ AxGrids:
   position: 1
   options_json: '{"enableQuickSearch":false,"enableFlatMode":false,"enableColumnsResize":true,"enableFiltering":true,"enableSorting":true,"enableOpenForm":true,"enableActions":true,"rowHeight":45,"pinned":0}'
   is_default_view: true
-  columns: []
+  columns:
+  - guid: 4372dbc8-ff57-47bf-9050-500ea9bf8fd5
+    position: 0
+    options_json:
+    field_guid: 3bbdc5e9-f3c0-4da0-9b0d-663f1e48cf4b
+    column_type: columns
+    aggregation_type:
+  - guid: a048150c-9bdb-4ac1-ab6d-fcc0e032aae8
+    position: 1
+    options_json:
+    field_guid: 70e0fe96-1457-4800-a283-e730ca0d15df
+    column_type: columns
+    aggregation_type:
+  - guid: 38264b5a-3536-4f29-bafd-b561a840f9b4
+    position: 2
+    options_json:
+    field_guid: 35d7722b-c386-484f-b470-90715e020eb7
+    column_type: columns
+    aggregation_type:
 AxRoles:
 - guid: e6d34a9d-e5ad-4883-a911-d249abba4725
   name: Capex dep
@@ -123,7 +141,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - e6d34a9d-e5ad-4883-a911-d249abba4725
 - guid: 33b5ccc4-0d4d-49ca-a5b6-ccd28c977fc2
@@ -134,7 +152,7 @@ AxActions:
   confirm_text:
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles:
   - e6d34a9d-e5ad-4883-a911-d249abba4725
 - guid: b8883665-228f-4dc5-bf9e-63b829a4f05c
@@ -145,7 +163,7 @@ AxActions:
   confirm_text: Are you sure you want to delete record?
   close_modal: true
   icon:
-  radius:
+  radius: 0.0
   roles: []
 AxRoleFieldPermission:
 - role_guid: e6d34a9d-e5ad-4883-a911-d249abba4725
