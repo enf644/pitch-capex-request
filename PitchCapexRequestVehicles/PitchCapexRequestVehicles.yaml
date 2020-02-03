@@ -34,8 +34,8 @@ AxFields:
   db_name: type
   position: 1
   options_json: '{"items":"[\n    {\"text\": \"Passenger Vehicle - 2 Wheeler\", \"value\":
-    \"1\" }\n    {\"text\": \"Passenger Vehicle - 4 Wheeler\", \"value\": \"2\" }\n    {\"text\":
-    \"Heavy Vehicle - 4 Wheeler\", \"value\": \"3\" }\n    {\"text\": \"Heavy Vehicle
+    \"1\" },\n    {\"text\": \"Passenger Vehicle - 4 Wheeler\", \"value\": \"2\" },\n    {\"text\":
+    \"Heavy Vehicle - 4 Wheeler\", \"value\": \"3\" },\n    {\"text\": \"Heavy Vehicle
     - 6 Wheeler\", \"value\": \"4\" }\n]"}'
   private_options_json:
   field_type_tag: AxChoise
